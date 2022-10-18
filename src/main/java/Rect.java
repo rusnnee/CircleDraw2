@@ -1,6 +1,7 @@
 import java.awt.*;
 
-public class Rect extends Shape{
+public class Rect extends Shape
+{
     private int w;	// Fields
     private int h;
     public Rect(Point initPos, Color col, int width, int height){

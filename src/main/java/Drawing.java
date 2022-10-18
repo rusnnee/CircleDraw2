@@ -25,6 +25,16 @@ public class Drawing extends Canvas
         rect = new Rect (pRect, cRect, wRect, hRect);
 
 
+        setupFrame();
+        setupCanvas();
+    }
+
+    private void setupCanvas() {
+        setBackground(Color.WHITE); 	// Sets the Canvas background
+        setSize(400, 400);		// Sets the Canvas size to be the same as the frame
+    }
+
+    private void setupFrame() {
         f = new Frame("My Window");
         f.add(this);
         f.setLayout(null);
@@ -35,8 +45,6 @@ public class Drawing extends Canvas
                 f.dispose();
             }
         });
-        setBackground(Color.WHITE); 	// Sets the Canvas background
-        setSize(400, 400);		// Sets the Canvas size to be the same as the frame
     }
 
     public void paint (Graphics g){
