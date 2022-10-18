@@ -8,13 +8,22 @@ public class Drawing extends Canvas
     private Frame f;
     private Circle circ;
 
+    private Rect rect;
+
     public Drawing(){
 
-        Point p = new Point(200,200);
-        Color c = new Color(0x992266);// The RGB number comprises three bytes: red, green and blue
+        Point pCirc = new Point(200,200);
+        Color cCirc = new Color(0x992266);// The RGB number comprises three bytes: red, green and blue
         int r = 100;
+        circ = new Circle(pCirc, cCirc, r);
 
-        circ = new Circle(p, c, r);
+
+        Point pRect = new Point(100,100);
+        Color cRect = new Color(0x229965);// The RGB number comprises three bytes: red, green and blue
+        int wRect = 100;
+        int hRect = 40;
+        rect = new Rect (pRect, cRect, wRect, hRect);
+
 
         f = new Frame("My Window");
         f.add(this);
@@ -32,5 +41,6 @@ public class Drawing extends Canvas
 
     public void paint (Graphics g){
         circ.draw(g);
+        rect.draw(g);
     }
 }
