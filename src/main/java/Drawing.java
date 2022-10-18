@@ -1,3 +1,6 @@
+import Shapes.Circle;
+import Shapes.Rect;
+
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -22,7 +25,7 @@ public class Drawing extends Canvas
         Color cRect = new Color(0x229965);// The RGB number comprises three bytes: red, green and blue
         int wRect = 100;
         int hRect = 40;
-        rect = new Rect (pRect, cRect, wRect, hRect);
+        rect = new Rect(pRect, cRect, wRect, hRect);
 
 
         setupFrame();
